@@ -1,0 +1,23 @@
+type stsReq {
+	Bucket string `json:"bucket"` // bucket
+}
+
+type stsReply {
+	Region        string `json:"region"`
+	Endpoint      string `json:"endpoint"`
+	Bucket        string `json:"bucket"`
+	AccessKey     string `json:"accessKeyId"`
+	SecretKey     string `json:"accessKeySecret"`
+	SecurityToken string `json:"stsToken"`
+}
+
+@server(
+	group: aliyun
+	prefix: aliyun
+)
+
+service oss-api {
+	@doc "操作对象列表"
+	@handler sts
+	post /sts (stsReq) returns (stsReply)
+}

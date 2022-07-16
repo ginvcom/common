@@ -1,0 +1,10 @@
+Name: oss-api
+Host: 0.0.0.0
+Port: 8888
+AliyunOSS:
+  doc:
+    Region: 'ch-shenzhen'
+    AccessKey: 'docAccessKey'
+    SecretKey: 'docSecretKey'
+    Bucket: 'doc'
+    Domain: 'doc.ginv.com'
